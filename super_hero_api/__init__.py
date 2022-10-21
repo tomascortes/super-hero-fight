@@ -1,0 +1,1 @@
+from super_hero_api.hero_requests import get_random_heros
