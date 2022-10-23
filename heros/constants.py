@@ -1,0 +1,2 @@
+MAX_AS = 10
+MAX_FB_RAND_RANGE = 9

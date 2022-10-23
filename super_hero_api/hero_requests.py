@@ -9,7 +9,7 @@ import os
 from .constants import TOTAL_HEROES
 
 
-def get_random_heros(amount_of_heros: int = 4) -> list:
+def get_random_heros(amount_of_heros: int = 10) -> list:
     """Recives the amount of unique heroes to be returned and returns a list of them."""
     hero_list = []
     API_KEY = os.getenv('API_KEY')
@@ -17,7 +17,7 @@ def get_random_heros(amount_of_heros: int = 4) -> list:
     if not API_KEY:
         raise ValueError('API_KEY not found in .env file')
 
-    for id in np_rand.permutation(TOTAL_HEROES)[:10]:
+    for id in np_rand.permutation(TOTAL_HEROES)[:amount_of_heros]:
         try:
             response = requests.get(
                 f"https://superheroapi.com/api/{API_KEY}/{id}")
