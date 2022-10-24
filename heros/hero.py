@@ -1,5 +1,6 @@
 # external libraries
 from random import randint, choice
+from numpy import outer
 from pydantic import BaseModel, PrivateAttr
 # internal libraries
 from .constants import MAX_AS, MAX_FB_RAND_RANGE
@@ -8,7 +9,7 @@ class Hero(BaseModel):
     id: int
     name: str
     alignment: str
-    avaliable: bool = True
+    alive: bool = True
     actual_stamina: int = randint(0, MAX_AS)
     filiation_coeficient: float = None
     _hp: int = PrivateAttr()
@@ -45,10 +46,13 @@ class Hero(BaseModel):
         self._hp -= damage
         if self._hp < 0:
             self._hp = 0
-            self.avaliable = False
+            self.alive = False
 
     def regenerate_hp(self):
         self._hp = self._base_hp
+
+    def is_alive(self):
+        return self.alive
 
     def mental_damage(self):
         damage = (
@@ -77,5 +81,19 @@ class Hero(BaseModel):
             self.strong_damage,
             self.fast_damage]
         selected_attack = choice(possible_attacks)
-        return selected_attack() * self._filiation_coeficient
+        return selected_attack() * self.filiation_coeficient
+
+    def __str__(self):
+        output = f"{self.name} - {self.alignment}\n"
+        output += f"HP: {self.hp}\n"
+        output += f"Stamina: {self.actual_stamina}\n"
+        output += f"FB: {self.filiation_coeficient}\n"
+        output += f"Intelligence: {self.intelligence}\n"
+        output += f"Strength: {self.strength}\n"
+        output += f"Speed: {self.speed}\n"
+        output += f"Durability: {self.durability}\n"
+        output += f"Power: {self.power}\n"
+        output += f"Combat: {self.combat}\n"
+        return output
+
         

@@ -9,7 +9,7 @@ class TeamBuilder(BaseModel):
     heroes: Optional[List[Hero]] = []
     alignment: Optional[str] = None
 
-    def create_team(self, heroes: List[Hero]) -> Team:
+    def create_team(self, id: str,heroes: List[Hero]) -> Team:
         self.reset()
         # Creating the team
         self.alignment = self._set_alignment(heroes)
@@ -17,7 +17,7 @@ class TeamBuilder(BaseModel):
         self._set_filiation_coeficient()
         self._update_stats()
         self._set_hp()
-        return Team(heroes=self.heroes, alignment=self.alignment)
+        return Team(id=id, heroes=self.heroes, alignment=self.alignment)
 
     def reset(self):
         self.heroes = []
