@@ -1,5 +1,7 @@
+# external libraries
 from pydantic import BaseModel
-from typing import Dict, List, Optional
+from typing import Dict, Optional
+# internal libraries
 from heros import Team
 
 

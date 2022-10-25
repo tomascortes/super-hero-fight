@@ -1,6 +1,5 @@
 # external libraries
 from random import randint, choice
-from numpy import outer
 from pydantic import BaseModel, PrivateAttr
 # internal libraries
 from .constants import MAX_AS, MAX_FB_RAND_RANGE

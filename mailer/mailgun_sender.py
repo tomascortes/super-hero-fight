@@ -1,7 +1,6 @@
 # external libraries
 import requests
 import os
-from PIL import Image
 # internal libraries
 from .constants import MAILGUN_ADRESS, MAILGUN_URL
 
@@ -14,7 +13,7 @@ def send_mailgun_email(email_adress, body) -> bool:
         response=requests.post(
             MAILGUN_URL,
             auth=auth,
-            data={"from": "cor.tomas@gmail.com",
+            data={"from": MAILGUN_ADRESS,
                 "to": [email_adress],
                 "subject": "Summary simulation Tomás Cortés",
                 'html': html_generator(body)})

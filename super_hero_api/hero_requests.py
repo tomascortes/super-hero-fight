@@ -3,6 +3,7 @@
 """This manage the api requests."""
 # external libraries
 import requests
+# external libraries
 from numpy import random as np_rand
 import os
 # internal libraries

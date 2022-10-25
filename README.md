@@ -6,7 +6,17 @@ You need to crate a ```.env``` file and add the variable
 
 ``` API_KEY = "your_api_key" ```
 
-install the requierments from the ```requirments.txt``` file.
+Install the requierments from the ```requirments.txt``` file.
+``` 
+pip install -r requirments
+``` 
+
+# Execution
+
+To run the code you need to execute:
+``` 
+python main.py
+``` 
 
 # Assumntions
 
@@ -18,4 +28,4 @@ Given the description of the tasks. I assumed that the fights where 1 vs 1. For 
 
 - the recalculation of stats it is done before the calculation of HP
 
-- In case of neutral heros, causing a tie at the moment of defining the alignment of the team, i say that the good heros will convince the neutral to be a good team. 
+- In case of neutral heros, causing a tie at the moment of defining the alignment of the team, i say that the good heros will convince the neutral to be a good team.

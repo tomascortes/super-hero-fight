@@ -10,7 +10,7 @@ if __name__ == "__main__":
     load_dotenv('.env') 
     print("--Welcome to KuTo fighting simulator--")
     print("Loding the heroes...")
-    total_heroes = get_random_heros(amount_of_heros=6)
+    total_heroes = get_random_heros(amount_of_heros=10)
     builder = TeamBuilder()
     half_heroes = len(total_heroes) // 2
     
