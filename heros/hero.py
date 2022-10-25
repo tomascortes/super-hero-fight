@@ -54,28 +54,28 @@ class Hero(BaseModel):
     def is_alive(self):
         return self.alive
 
-    def mental_damage(self):
+    def mental_damage(self) -> float:
         damage = (
             self.intelligence*0.7 +
             self.speed*0.2 +
             self.combat*0.1)
         return damage
 
-    def strong_damage(self):
+    def strong_damage(self) -> float:
         damage = (
             self.strength*0.6 +
             self.power*0.2 +
             self.combat*0.2)
         return damage
 
-    def fast_damage(self):
+    def fast_damage(self) -> float:
         damage = (
             self.speed*0.55 +
             self.durability*0.25 +
             self.strength*0.2)
         return damage
 
-    def attack(self):
+    def attack(self) -> float:
         possible_attacks = [
             self.mental_damage,
             self.strong_damage,

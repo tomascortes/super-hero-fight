@@ -18,6 +18,8 @@ Given the description of the tasks. I assumed that the fights where 1 vs 1. For 
 
 - the recalculation of stats it is done before the calculation of HP
 
+- In case of neutral heros, causing a tie at the moment of defining the alignment of the team, i say that the good heros will convince the neutral to be a good team. 
+
 
 # TODO
 función suelo en formulas hp y stats

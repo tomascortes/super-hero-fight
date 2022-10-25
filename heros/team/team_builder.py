@@ -56,7 +56,10 @@ class TeamBuilder(BaseModel):
             self.alignment = 'bad'
             return 'bad'
         else:
-            raise ValueError("Cant´t create a team with equal number of good and bad heros")
+            #Case with neutral alignments, 
+            # because i believe that good is easier to spread (or i want to)
+            # i assume that the good members will convince the neutral to be good
+            return 'good'
 
     def _set_filiation_coeficient(self):
         """Set the filiation coeficient of the heros acording to its team alignment"""

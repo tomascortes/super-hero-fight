@@ -28,7 +28,6 @@ class Team(BaseModel):
             output += "----------\n"
             output += "Name: " + hero.name + "\n"
             output += "HP: " + str(hero.hp) + "\n"
-            output += "FB: " + str(hero.alignment) + "\n"
-            output += "Strength: " + str(hero.strength) + "\n"
+            output += "Alignment: " + str(hero.alignment) + "\n"
         return output
 

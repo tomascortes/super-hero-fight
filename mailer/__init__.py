@@ -1,0 +1,1 @@
+from .mailer_interface import send_results
