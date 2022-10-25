@@ -76,10 +76,10 @@ class TeamBuilder(BaseModel):
                     stat,
                     self._stat_modifier(intial_value, hero))
 
-    def _stat_modifier(self, initial_value, hero):
+    def _stat_modifier(self, initial_value, hero) -> int:
         """Modify the specific stat of the heros acording to the base formula"""
         new_base_value = (initial_value * 2 + hero.actual_stamina)/1.1
-        return hero.filiation_coeficient * new_base_value
+        return int(hero.filiation_coeficient * new_base_value)
 
     def _set_hp(self):
         """ Calculates the initial hp of the hero"""
@@ -89,6 +89,6 @@ class TeamBuilder(BaseModel):
                 hero.durability*0.7 +
                 hero.power) / 2
             hp = hp * (1 + hero.actual_stamina/10) + 100
-            hero.initialize_hp(hp)
+            hero.initialize_hp(int(hp))
 
 

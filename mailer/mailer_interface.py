@@ -7,5 +7,8 @@ def ask_for_email() -> str:
     return email
 
 def send_results(body: str) -> str:
+    confirmation = input("Do you want to send the results to your email? (y/n): ")
+    if confirmation != "y":
+        return False
     email = ask_for_email()
     return send_mailgun_email(email, body)
