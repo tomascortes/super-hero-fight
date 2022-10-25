@@ -4,7 +4,9 @@ Simulator of a hero fight based on its stats
 
 You need to crate a ```.env``` file and add the variable 
 
-``` API_KEY = "your_api_key" ```
+``` 
+API_KEY = "your_api_key" 
+```
 
 Install the requierments from the ```requirments.txt``` file.
 ``` 
