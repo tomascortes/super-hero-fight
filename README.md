@@ -1,5 +1,5 @@
-# Hero Fight simulator
-Simulator of a hero fight based on its stats
+# Hero Fight simulator 🦇 
+Simulator of an epic battle between tho teams made of heros 🦸‍♀️ and villains 🦹
 # Installation
 
 You need to crate a ```.env``` file and add the variable 
@@ -20,7 +20,7 @@ To run the code you need to execute:
 ``` 
 python main.py
 ``` 
-
+😵‍
 # Assumntions
 
 Given the description of the tasks. I assumed that the fights where 1 vs 1. For the simplicity of the problem, they will fight in turns. Starting the hero with grater speed. In case both have the same speed, its randomly selected.
