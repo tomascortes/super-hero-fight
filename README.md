@@ -5,7 +5,8 @@ Simulator of a hero fight based on its stats
 You need to crate a ```.env``` file and add the variable 
 
 ``` 
-API_KEY = "your_api_key" 
+HERO_API_KEY="hero_api_key" 
+MAIL_GUN_API_KEY="mailgun_api_key
 ```
 
 Install the requierments from the ```requirments.txt``` file.
